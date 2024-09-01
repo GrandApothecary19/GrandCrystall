@@ -39,6 +39,14 @@
         density: 30
         mask:
         - ItemMask
+  - type: Flammable # Скопировано с бумаги, тут не очень уверен в правильности
+    fireSpread: true
+    canResistFire: false
+    alwaysCombustible: true
+    canExtinguish: false
+    damage:
+      types:
+        Heat: 1
   - type: Tag
     tags:
     - CP14FireplaceFuel

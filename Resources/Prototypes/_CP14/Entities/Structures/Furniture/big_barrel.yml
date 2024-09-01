@@ -35,31 +35,6 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-    - trigger:
-        !type:DamageTypeTrigger
-        damageType: Heat
-        damage: 5
-      behaviors:
-      - !type:SolutionExplosionBehavior
-        solution: barrel
-    - trigger:
-        !type:DamageTypeTrigger
-        damageType: Piercing
-        damage: 5
-      behaviors:
-      - !type:SolutionExplosionBehavior
-        solution: barrel
-    - trigger:
-        !type:DamageTrigger
-        damage: 10
-      behaviors:
-      - !type:SpillBehavior
-        solution: barrel
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalBreak
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
   - type: Appearance
   - type: Sprite
     drawdepth: Mobs
@@ -73,9 +48,6 @@
     solutions:
       barrel:
         maxVol: 300
-  - type: SolutionContainerVisuals
-    maxFillLevels: 5
-    fillBaseName: liq
   - type: DrainableSolution
     solution: barrel
   - type: ExaminableSolution
@@ -87,6 +59,4 @@
   - type: DrawableSolution
     solution: barrel
   - type: DumpableSolution
-    solution: barrel
-  - type: Drink
     solution: barrel
